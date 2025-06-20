@@ -1,0 +1,162 @@
+.security-test-runner {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+}
+
+.security-test-runner h2 {
+  margin: 0 0 1.5rem 0;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.test-overview {
+  background: #fef3c7;
+  border: 1px solid #fbbf24;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+
+.test-overview p {
+  margin: 0;
+  color: #92400e;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.tests-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+
+.test-card {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.test-card:hover {
+  border-color: #dc2626;
+  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.1);
+}
+
+.test-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #fee2e2;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.test-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.test-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+.test-controls {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.run-security-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  color: white;
+  border: none;
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.run-security-btn:hover:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(220, 38, 38, 0.3);
+}
+
+.run-security-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.security-spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid transparent;
+  border-top: 2px solid currentColor;
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+.test-progress {
+  text-align: center;
+}
+
+.progress-bar {
+  width: 100%;
+  height: 8px;
+  background: #e5e7eb;
+  border-radius: 4px;
+  overflow: hidden;
+  margin-bottom: 1rem;
+}
+
+.progress-fill {
+  height: 100%;
+  background: linear-gradient(135deg, #dc2626 0%, #991b1b 100%);
+  border-radius: 4px;
+  animation: progress 10s ease-in-out infinite;
+}
+
+@keyframes progress {
+  0% { width: 0%; }
+  50% { width: 70%; }
+  100% { width: 100%; }
+}
+
+.test-progress p {
+  color: #64748b;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+@media (max-width: 768px) {
+  .security-test-runner {
+    padding: 1.5rem;
+  }
+  
+  .tests-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .run-security-btn {
+    padding: 0.875rem 1.5rem;
+    font-size: 1rem;
+  }
+}

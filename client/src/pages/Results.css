@@ -1,0 +1,42 @@
+.results-page {
+  padding: 0;
+}
+
+.results-header {
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  color: white;
+  padding: 3rem 2rem;
+  border-radius: 20px;
+  margin-bottom: 2rem;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.results-header h1 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin-bottom: 0.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.results-header p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+  margin: 0;
+}
+
+.results-content {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+@media (max-width: 768px) {
+  .results-header {
+    padding: 2rem 1rem;
+  }
+  
+  .results-header h1 {
+    font-size: 2rem;
+  }
+}

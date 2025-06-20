@@ -1,0 +1,169 @@
+.results-overview {
+  background: white;
+  border-radius: 16px;
+  padding: 2rem;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+  margin-bottom: 2rem;
+}
+
+.results-overview h2 {
+  margin: 0 0 2rem 0;
+  color: #1e293b;
+  font-size: 1.5rem;
+  font-weight: 700;
+  text-align: center;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+.summary-card {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.5rem;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  background: #fafafa;
+}
+
+.summary-card:hover {
+  border-color: #3b82f6;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.1);
+  background: white;
+}
+
+.card-icon {
+  font-size: 2.5rem;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #3b82f6 0%, #1d4ed8 100%);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.card-content h3 {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-size: 1.1rem;
+  font-weight: 600;
+}
+
+.winner-text {
+  font-size: 1.5rem;
+  font-weight: 800;
+  margin-bottom: 0.25rem;
+}
+
+.winner-text.blake3 {
+  color: #059669;
+}
+
+.winner-text.sha512 {
+  color: #dc2626;
+}
+
+.metric-value {
+  font-size: 2rem;
+  font-weight: 800;
+  color: #3b82f6;
+  margin-bottom: 0.25rem;
+}
+
+.card-content p {
+  margin: 0;
+  color: #64748b;
+  font-size: 0.9rem;
+}
+
+.key-findings {
+  border-top: 1px solid #e2e8f0;
+  padding-top: 2rem;
+}
+
+.key-findings h3 {
+  margin: 0 0 1.5rem 0;
+  color: #1e293b;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.findings-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.finding-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1rem;
+  background: #f8fafc;
+  border-radius: 8px;
+  border-left: 4px solid #3b82f6;
+}
+
+.finding-icon {
+  font-size: 1.5rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  border-radius: 8px;
+  flex-shrink: 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.finding-content h4 {
+  margin: 0 0 0.5rem 0;
+  color: #1e293b;
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.finding-content p {
+  margin: 0;
+  color: #475569;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+  .results-overview {
+    padding: 1.5rem;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+  
+  .summary-card {
+    padding: 1rem;
+  }
+  
+  .card-icon {
+    font-size: 2rem;
+    width: 50px;
+    height: 50px;
+  }
+  
+  .winner-text {
+    font-size: 1.25rem;
+  }
+  
+  .metric-value {
+    font-size: 1.5rem;
+  }
+}
